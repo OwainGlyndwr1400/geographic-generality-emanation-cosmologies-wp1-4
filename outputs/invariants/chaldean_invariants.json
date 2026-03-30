@@ -36,11 +36,11 @@
   },
   "functional_role_counts": {
     "demiurge": 1,
-    "soul": 1,
-    "source": 1,
+    "matter": 1,
     "intellect": 1,
     "intermediary": 1,
-    "matter": 1
+    "source": 1,
+    "soul": 1
   },
   "depth_profile": {
     "0": [

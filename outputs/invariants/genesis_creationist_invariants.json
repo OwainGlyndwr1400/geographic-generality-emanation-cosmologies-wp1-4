@@ -45,10 +45,10 @@
     "creation": 7
   },
   "functional_role_counts": {
-    "first_emanation": 1,
-    "source": 1,
+    "matter": 2,
     "intermediary": 4,
-    "matter": 2
+    "first_emanation": 1,
+    "source": 1
   },
   "depth_profile": {
     "0": [

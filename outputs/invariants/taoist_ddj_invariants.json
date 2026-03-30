@@ -33,10 +33,10 @@
     "emanation": 3
   },
   "functional_role_counts": {
-    "first_emanation": 1,
-    "source": 1,
+    "matter": 1,
     "intermediary": 2,
-    "matter": 1
+    "first_emanation": 1,
+    "source": 1
   },
   "depth_profile": {
     "0": [

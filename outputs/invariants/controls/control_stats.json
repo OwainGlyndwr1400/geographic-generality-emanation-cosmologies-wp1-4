@@ -3,8 +3,8 @@
     "label": "pooled",
     "n": 1000,
     "depth": {
-      "mean": 3.926,
-      "std": 1.294,
+      "mean": 3.955,
+      "std": 1.2911,
       "p05": 2.0,
       "p25": 3.0,
       "p50": 4.0,
@@ -14,8 +14,8 @@
       "max": 9
     },
     "diameter": {
-      "mean": 4.808,
-      "std": 1.3241,
+      "mean": 4.908,
+      "std": 1.3098,
       "p05": 3.0,
       "p25": 4.0,
       "p50": 5.0,
@@ -25,8 +25,8 @@
       "max": 10
     },
     "width": {
-      "mean": 2.428,
-      "std": 0.7475,
+      "mean": 2.473,
+      "std": 0.7907,
       "p05": 1.0,
       "p25": 2.0,
       "p50": 2.0,
@@ -36,8 +36,8 @@
       "max": 6
     },
     "max_branching": {
-      "mean": 2.28,
-      "std": 0.6337,
+      "mean": 2.295,
+      "std": 0.6557,
       "p05": 1.0,
       "p25": 2.0,
       "p50": 2.0,
@@ -47,8 +47,8 @@
       "max": 5
     },
     "mean_branching": {
-      "mean": 1.4809,
-      "std": 0.3516,
+      "mean": 1.4872,
+      "std": 0.3438,
       "p05": 1.0,
       "p25": 1.25,
       "p50": 1.4,
@@ -58,19 +58,19 @@
       "max": 4.0
     },
     "leaf_count": {
-      "mean": 2.871,
-      "std": 1.0121,
+      "mean": 2.965,
+      "std": 1.1179,
       "p05": 1.0,
       "p25": 2.0,
       "p50": 3.0,
       "p75": 4.0,
       "p95": 5.0,
       "min": 1,
-      "max": 6
+      "max": 7
     },
     "branching_node_count": {
-      "mean": 1.521,
-      "std": 0.7795,
+      "mean": 1.583,
+      "std": 0.8373,
       "p05": 0.0,
       "p25": 1.0,
       "p50": 1.0,
@@ -79,7 +79,7 @@
       "min": 0,
       "max": 4
     },
-    "linear_chain_frequency": 0.059
+    "linear_chain_frequency": 0.064
   },
   "bundahishn_zoroastrian": {
     "label": "stratified_n6_bundahishn_zoroastrian",
@@ -408,6 +408,88 @@
       "max": 3
     },
     "linear_chain_frequency": 0.031
+  },
+  "gospel_of_mary": {
+    "label": "stratified_n9_gospel_of_mary",
+    "n": 1000,
+    "depth": {
+      "mean": 4.633,
+      "std": 1.1655,
+      "p05": 3.0,
+      "p25": 4.0,
+      "p50": 5.0,
+      "p75": 5.0,
+      "p95": 7.0,
+      "min": 2,
+      "max": 8
+    },
+    "diameter": {
+      "mean": 5.78,
+      "std": 0.9516,
+      "p05": 4.0,
+      "p25": 5.0,
+      "p50": 6.0,
+      "p75": 6.0,
+      "p95": 7.0,
+      "min": 4,
+      "max": 8
+    },
+    "width": {
+      "mean": 2.768,
+      "std": 0.7708,
+      "p05": 2.0,
+      "p25": 2.0,
+      "p50": 3.0,
+      "p75": 3.0,
+      "p95": 4.0,
+      "min": 1,
+      "max": 6
+    },
+    "max_branching": {
+      "mean": 2.501,
+      "std": 0.6753,
+      "p05": 2.0,
+      "p25": 2.0,
+      "p50": 2.0,
+      "p75": 3.0,
+      "p95": 4.0,
+      "min": 1,
+      "max": 6
+    },
+    "mean_branching": {
+      "mean": 1.4999,
+      "std": 0.2763,
+      "p05": 1.1429,
+      "p25": 1.3333,
+      "p50": 1.3333,
+      "p75": 1.6,
+      "p95": 2.0,
+      "min": 1.0,
+      "max": 2.6667
+    },
+    "leaf_count": {
+      "mean": 3.504,
+      "std": 0.9132,
+      "p05": 2.0,
+      "p25": 3.0,
+      "p50": 3.0,
+      "p75": 4.0,
+      "p95": 5.0,
+      "min": 1,
+      "max": 6
+    },
+    "branching_node_count": {
+      "mean": 1.959,
+      "std": 0.7038,
+      "p05": 1.0,
+      "p25": 2.0,
+      "p50": 2.0,
+      "p75": 2.0,
+      "p95": 3.0,
+      "min": 0,
+      "max": 4
+    },
+    "linear_chain_frequency": 0.013
   },
   "hermetic": {
     "label": "stratified_n8_hermetic",
@@ -819,6 +901,88 @@
     },
     "linear_chain_frequency": 0.184
   },
+  "popol_vuh_maya": {
+    "label": "stratified_n11_popol_vuh_maya",
+    "n": 1000,
+    "depth": {
+      "mean": 5.447,
+      "std": 1.3165,
+      "p05": 3.0,
+      "p25": 4.0,
+      "p50": 5.0,
+      "p75": 6.0,
+      "p95": 8.0,
+      "min": 3,
+      "max": 9
+    },
+    "diameter": {
+      "mean": 6.839,
+      "std": 1.1354,
+      "p05": 5.0,
+      "p25": 6.0,
+      "p50": 7.0,
+      "p75": 8.0,
+      "p95": 9.0,
+      "min": 4,
+      "max": 10
+    },
+    "width": {
+      "mean": 3.087,
+      "std": 0.8267,
+      "p05": 2.0,
+      "p25": 3.0,
+      "p50": 3.0,
+      "p75": 4.0,
+      "p95": 4.0,
+      "min": 2,
+      "max": 6
+    },
+    "max_branching": {
+      "mean": 2.638,
+      "std": 0.676,
+      "p05": 2.0,
+      "p25": 2.0,
+      "p50": 3.0,
+      "p75": 3.0,
+      "p95": 4.0,
+      "min": 2,
+      "max": 6
+    },
+    "mean_branching": {
+      "mean": 1.5065,
+      "std": 0.2451,
+      "p05": 1.25,
+      "p25": 1.384,
+      "p50": 1.4286,
+      "p75": 1.6667,
+      "p95": 2.0,
+      "min": 1.1111,
+      "max": 2.5
+    },
+    "leaf_count": {
+      "mean": 4.2,
+      "std": 1.0208,
+      "p05": 3.0,
+      "p25": 3.75,
+      "p50": 4.0,
+      "p75": 5.0,
+      "p95": 6.0,
+      "min": 2,
+      "max": 7
+    },
+    "branching_node_count": {
+      "mean": 2.499,
+      "std": 0.8075,
+      "p05": 1.0,
+      "p25": 2.0,
+      "p50": 2.0,
+      "p75": 3.0,
+      "p95": 4.0,
+      "min": 1,
+      "max": 4
+    },
+    "linear_chain_frequency": 0.0
+  },
   "proclan_neoplatonic": {
     "label": "stratified_n8_proclan_neoplatonic",
     "n": 1000,
@@ -1146,6 +1310,88 @@
       "max": 2
     },
     "linear_chain_frequency": 0.184
+  },
+  "trimorphic_protennoia": {
+    "label": "stratified_n7_trimorphic_protennoia",
+    "n": 1000,
+    "depth": {
+      "mean": 3.792,
+      "std": 0.9278,
+      "p05": 2.0,
+      "p25": 3.0,
+      "p50": 4.0,
+      "p75": 4.0,
+      "p95": 5.0,
+      "min": 2,
+      "max": 6
+    },
+    "diameter": {
+      "mean": 4.66,
+      "std": 0.7338,
+      "p05": 4.0,
+      "p25": 4.0,
+      "p50": 5.0,
+      "p75": 5.0,
+      "p95": 6.0,
+      "min": 2,
+      "max": 6
+    },
+    "width": {
+      "mean": 2.408,
+      "std": 0.6446,
+      "p05": 2.0,
+      "p25": 2.0,
+      "p50": 2.0,
+      "p75": 3.0,
+      "p95": 4.0,
+      "min": 1,
+      "max": 5
+    },
+    "max_branching": {
+      "mean": 2.295,
+      "std": 0.5882,
+      "p05": 2.0,
+      "p25": 2.0,
+      "p50": 2.0,
+      "p75": 3.0,
+      "p95": 3.0,
+      "min": 1,
+      "max": 5
+    },
+    "mean_branching": {
+      "mean": 1.4855,
+      "std": 0.3065,
+      "p05": 1.2,
+      "p25": 1.2,
+      "p50": 1.5,
+      "p75": 1.5,
+      "p95": 2.0,
+      "min": 1.0,
+      "max": 3.0
+    },
+    "leaf_count": {
+      "mean": 2.807,
+      "std": 0.7757,
+      "p05": 2.0,
+      "p25": 2.0,
+      "p50": 3.0,
+      "p75": 3.0,
+      "p95": 4.0,
+      "min": 1,
+      "max": 5
+    },
+    "branching_node_count": {
+      "mean": 1.476,
+      "std": 0.6143,
+      "p05": 1.0,
+      "p25": 1.0,
+      "p50": 1.0,
+      "p75": 2.0,
+      "p95": 2.0,
+      "min": 0,
+      "max": 3
+    },
+    "linear_chain_frequency": 0.033
   },
   "valentinian_gnostic": {
     "label": "stratified_n9_valentinian_gnostic",

@@ -39,17 +39,17 @@
     3
   ],
   "edge_type_counts": {
-    "reflection": 1,
-    "fragmentation": 1,
     "creation": 3,
-    "emanation": 2
+    "emanation": 2,
+    "reflection": 1,
+    "fragmentation": 1
   },
   "functional_role_counts": {
-    "first_emanation": 1,
     "demiurge": 1,
-    "source": 1,
+    "matter": 2,
     "intermediary": 3,
-    "matter": 2
+    "first_emanation": 1,
+    "source": 1
   },
   "depth_profile": {
     "0": [

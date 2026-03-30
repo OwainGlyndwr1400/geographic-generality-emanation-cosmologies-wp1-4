@@ -40,18 +40,18 @@
     2
   ],
   "edge_type_counts": {
-    "fragmentation": 2,
     "creation": 2,
-    "emanation": 4
+    "emanation": 4,
+    "fragmentation": 2
   },
   "functional_role_counts": {
-    "first_emanation": 1,
+    "fallen": 1,
     "demiurge": 1,
-    "source": 1,
+    "matter": 1,
     "intellect": 1,
     "intermediary": 3,
-    "fallen": 1,
-    "matter": 1
+    "first_emanation": 1,
+    "source": 1
   },
   "depth_profile": {
     "0": [

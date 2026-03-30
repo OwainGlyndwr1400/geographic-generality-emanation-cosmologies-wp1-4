@@ -8,6 +8,9 @@
   "bundahishn_zoroastrian vs genesis_creationist": {
     "wl_role_similarity": 0.271779
   },
+  "bundahishn_zoroastrian vs gospel_of_mary": {
+    "wl_role_similarity": 0.365385
+  },
   "bundahishn_zoroastrian vs hermetic": {
     "wl_role_similarity": 0.363137
   },
@@ -23,6 +26,9 @@
   "bundahishn_zoroastrian vs plotinian_neoplatonic": {
     "wl_role_similarity": 0.570088
   },
+  "bundahishn_zoroastrian vs popol_vuh_maya": {
+    "wl_role_similarity": 0.16538
+  },
   "bundahishn_zoroastrian vs proclan_neoplatonic": {
     "wl_role_similarity": 0.32686
   },
@@ -35,6 +41,9 @@
   "bundahishn_zoroastrian vs taoist_ddj": {
     "wl_role_similarity": 0.459933
   },
+  "bundahishn_zoroastrian vs trimorphic_protennoia": {
+    "wl_role_similarity": 0.310087
+  },
   "bundahishn_zoroastrian vs valentinian_gnostic": {
     "wl_role_similarity": 0.332875
   },
@@ -43,6 +52,9 @@
   },
   "chaldean vs genesis_creationist": {
     "wl_role_similarity": 0.152318
+  },
+  "chaldean vs gospel_of_mary": {
+    "wl_role_similarity": 0.180144
   },
   "chaldean vs hermetic": {
     "wl_role_similarity": 0.220479
@@ -59,6 +71,9 @@
   "chaldean vs plotinian_neoplatonic": {
     "wl_role_similarity": 0.182574
   },
+  "chaldean vs popol_vuh_maya": {
+    "wl_role_similarity": 0.150616
+  },
   "chaldean vs proclan_neoplatonic": {
     "wl_role_similarity": 0.238145
   },
@@ -71,11 +86,17 @@
   "chaldean vs taoist_ddj": {
     "wl_role_similarity": 0.174078
   },
+  "chaldean vs trimorphic_protennoia": {
+    "wl_role_similarity": 0.161374
+  },
   "chaldean vs valentinian_gnostic": {
     "wl_role_similarity": 0.220479
   },
   "derveni_orphic vs genesis_creationist": {
     "wl_role_similarity": 0.214529
+  },
+  "derveni_orphic vs gospel_of_mary": {
+    "wl_role_similarity": 0.197338
   },
   "derveni_orphic vs hermetic": {
     "wl_role_similarity": 0.31053
@@ -92,6 +113,9 @@
   "derveni_orphic vs plotinian_neoplatonic": {
     "wl_role_similarity": 0.25
   },
+  "derveni_orphic vs popol_vuh_maya": {
+    "wl_role_similarity": 0.164992
+  },
   "derveni_orphic vs proclan_neoplatonic": {
     "wl_role_similarity": 0.223607
   },
@@ -104,8 +128,14 @@
   "derveni_orphic vs taoist_ddj": {
     "wl_role_similarity": 0.381385
   },
+  "derveni_orphic vs trimorphic_protennoia": {
+    "wl_role_similarity": 0.212132
+  },
   "derveni_orphic vs valentinian_gnostic": {
     "wl_role_similarity": 0.276026
+  },
+  "genesis_creationist vs gospel_of_mary": {
+    "wl_role_similarity": 0.324044
   },
   "genesis_creationist vs hermetic": {
     "wl_role_similarity": 0.361873
@@ -122,6 +152,9 @@
   "genesis_creationist vs plotinian_neoplatonic": {
     "wl_role_similarity": 0.214529
   },
+  "genesis_creationist vs popol_vuh_maya": {
+    "wl_role_similarity": 0.16855
+  },
   "genesis_creationist vs proclan_neoplatonic": {
     "wl_role_similarity": 0.230967
   },
@@ -134,8 +167,47 @@
   "genesis_creationist vs taoist_ddj": {
     "wl_role_similarity": 0.295455
   },
+  "genesis_creationist vs trimorphic_protennoia": {
+    "wl_role_similarity": 0.387665
+  },
   "genesis_creationist vs valentinian_gnostic": {
     "wl_role_similarity": 0.279629
+  },
+  "gospel_of_mary vs hermetic": {
+    "wl_role_similarity": 0.393398
+  },
+  "gospel_of_mary vs ishraq_illuminationist": {
+    "wl_role_similarity": 0.304349
+  },
+  "gospel_of_mary vs lurianic_kabbalistic": {
+    "wl_role_similarity": 0.179029
+  },
+  "gospel_of_mary vs manichaean": {
+    "wl_role_similarity": 0.528657
+  },
+  "gospel_of_mary vs plotinian_neoplatonic": {
+    "wl_role_similarity": 0.219265
+  },
+  "gospel_of_mary vs popol_vuh_maya": {
+    "wl_role_similarity": 0.134371
+  },
+  "gospel_of_mary vs proclan_neoplatonic": {
+    "wl_role_similarity": 0.277831
+  },
+  "gospel_of_mary vs samkhya": {
+    "wl_role_similarity": 0.304349
+  },
+  "gospel_of_mary vs sethian_gnostic": {
+    "wl_role_similarity": 0.285886
+  },
+  "gospel_of_mary vs taoist_ddj": {
+    "wl_role_similarity": 0.397215
+  },
+  "gospel_of_mary vs trimorphic_protennoia": {
+    "wl_role_similarity": 0.341096
+  },
+  "gospel_of_mary vs valentinian_gnostic": {
+    "wl_role_similarity": 0.363137
   },
   "hermetic vs ishraq_illuminationist": {
     "wl_role_similarity": 0.338062
@@ -149,6 +221,9 @@
   "hermetic vs plotinian_neoplatonic": {
     "wl_role_similarity": 0.31053
   },
+  "hermetic vs popol_vuh_maya": {
+    "wl_role_similarity": 0.22771
+  },
   "hermetic vs proclan_neoplatonic": {
     "wl_role_similarity": 0.308607
   },
@@ -160,6 +235,9 @@
   },
   "hermetic vs taoist_ddj": {
     "wl_role_similarity": 0.427669
+  },
+  "hermetic vs trimorphic_protennoia": {
+    "wl_role_similarity": 0.317168
   },
   "hermetic vs valentinian_gnostic": {
     "wl_role_similarity": 0.428571
@@ -173,6 +251,9 @@
   "ishraq_illuminationist vs plotinian_neoplatonic": {
     "wl_role_similarity": 0.408248
   },
+  "ishraq_illuminationist vs popol_vuh_maya": {
+    "wl_role_similarity": 0.15396
+  },
   "ishraq_illuminationist vs proclan_neoplatonic": {
     "wl_role_similarity": 0.578152
   },
@@ -185,6 +266,9 @@
   "ishraq_illuminationist vs taoist_ddj": {
     "wl_role_similarity": 0.350325
   },
+  "ishraq_illuminationist vs trimorphic_protennoia": {
+    "wl_role_similarity": 0.288675
+  },
   "ishraq_illuminationist vs valentinian_gnostic": {
     "wl_role_similarity": 0.394405
   },
@@ -193,6 +277,9 @@
   },
   "lurianic_kabbalistic vs plotinian_neoplatonic": {
     "wl_role_similarity": 0.204124
+  },
+  "lurianic_kabbalistic vs popol_vuh_maya": {
+    "wl_role_similarity": 0.26943
   },
   "lurianic_kabbalistic vs proclan_neoplatonic": {
     "wl_role_similarity": 0.243432
@@ -206,11 +293,17 @@
   "lurianic_kabbalistic vs taoist_ddj": {
     "wl_role_similarity": 0.23355
   },
+  "lurianic_kabbalistic vs trimorphic_protennoia": {
+    "wl_role_similarity": 0.202073
+  },
   "lurianic_kabbalistic vs valentinian_gnostic": {
     "wl_role_similarity": 0.225374
   },
   "manichaean vs plotinian_neoplatonic": {
     "wl_role_similarity": 0.282144
+  },
+  "manichaean vs popol_vuh_maya": {
+    "wl_role_similarity": 0.145095
   },
   "manichaean vs proclan_neoplatonic": {
     "wl_role_similarity": 0.325006
@@ -224,8 +317,14 @@
   "manichaean vs taoist_ddj": {
     "wl_role_similarity": 0.415749
   },
+  "manichaean vs trimorphic_protennoia": {
+    "wl_role_similarity": 0.380875
+  },
   "manichaean vs valentinian_gnostic": {
     "wl_role_similarity": 0.442495
+  },
+  "plotinian_neoplatonic vs popol_vuh_maya": {
+    "wl_role_similarity": 0.164992
   },
   "plotinian_neoplatonic vs proclan_neoplatonic": {
     "wl_role_similarity": 0.372678
@@ -239,8 +338,29 @@
   "plotinian_neoplatonic vs taoist_ddj": {
     "wl_role_similarity": 0.333712
   },
+  "plotinian_neoplatonic vs trimorphic_protennoia": {
+    "wl_role_similarity": 0.247487
+  },
   "plotinian_neoplatonic vs valentinian_gnostic": {
     "wl_role_similarity": 0.276026
+  },
+  "popol_vuh_maya vs proclan_neoplatonic": {
+    "wl_role_similarity": 0.140546
+  },
+  "popol_vuh_maya vs samkhya": {
+    "wl_role_similarity": 0.15396
+  },
+  "popol_vuh_maya vs sethian_gnostic": {
+    "wl_role_similarity": 0.162698
+  },
+  "popol_vuh_maya vs taoist_ddj": {
+    "wl_role_similarity": 0.179787
+  },
+  "popol_vuh_maya vs trimorphic_protennoia": {
+    "wl_role_similarity": 0.116667
+  },
+  "popol_vuh_maya vs valentinian_gnostic": {
+    "wl_role_similarity": 0.16265
   },
   "proclan_neoplatonic vs samkhya": {
     "wl_role_similarity": 0.578152
@@ -251,6 +371,9 @@
   "proclan_neoplatonic vs taoist_ddj": {
     "wl_role_similarity": 0.319801
   },
+  "proclan_neoplatonic vs trimorphic_protennoia": {
+    "wl_role_similarity": 0.263523
+  },
   "proclan_neoplatonic vs valentinian_gnostic": {
     "wl_role_similarity": 0.385758
   },
@@ -260,16 +383,28 @@
   "samkhya vs taoist_ddj": {
     "wl_role_similarity": 0.350325
   },
+  "samkhya vs trimorphic_protennoia": {
+    "wl_role_similarity": 0.288675
+  },
   "samkhya vs valentinian_gnostic": {
     "wl_role_similarity": 0.394405
   },
   "sethian_gnostic vs taoist_ddj": {
     "wl_role_similarity": 0.329073
   },
+  "sethian_gnostic vs trimorphic_protennoia": {
+    "wl_role_similarity": 0.244047
+  },
   "sethian_gnostic vs valentinian_gnostic": {
     "wl_role_similarity": 0.714496
   },
+  "taoist_ddj vs trimorphic_protennoia": {
+    "wl_role_similarity": 0.30339
+  },
   "taoist_ddj vs valentinian_gnostic": {
     "wl_role_similarity": 0.361873
+  },
+  "trimorphic_protennoia vs valentinian_gnostic": {
+    "wl_role_similarity": 0.29277
   }
 }

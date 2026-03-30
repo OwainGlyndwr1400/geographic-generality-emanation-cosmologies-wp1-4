@@ -29,15 +29,15 @@
     1
   ],
   "edge_type_counts": {
-    "reflection": 1,
-    "emanation": 3
+    "emanation": 3,
+    "reflection": 1
   },
   "functional_role_counts": {
-    "first_emanation": 1,
-    "soul": 1,
-    "source": 1,
+    "matter": 1,
     "intermediary": 1,
-    "matter": 1
+    "first_emanation": 1,
+    "source": 1,
+    "soul": 1
   },
   "depth_profile": {
     "0": [

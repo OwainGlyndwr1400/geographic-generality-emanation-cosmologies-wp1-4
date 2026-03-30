@@ -33,18 +33,18 @@
     1
   ],
   "edge_type_counts": {
-    "fragmentation": 1,
     "creation": 2,
+    "emanation": 2,
     "contraction": 1,
-    "emanation": 2
+    "fragmentation": 1
   },
   "functional_role_counts": {
-    "first_emanation": 1,
-    "source": 1,
+    "process": 2,
+    "matter": 1,
     "intellect": 1,
     "intermediary": 1,
-    "process": 2,
-    "matter": 1
+    "first_emanation": 1,
+    "source": 1
   },
   "depth_profile": {
     "0": [

@@ -30,15 +30,15 @@
   ],
   "edge_type_counts": {
     "creation": 1,
-    "succession": 2,
-    "emanation": 1
+    "emanation": 1,
+    "succession": 2
   },
   "functional_role_counts": {
-    "first_emanation": 1,
     "demiurge": 1,
-    "source": 1,
+    "matter": 1,
     "intermediary": 1,
-    "matter": 1
+    "first_emanation": 1,
+    "source": 1
   },
   "depth_profile": {
     "0": [

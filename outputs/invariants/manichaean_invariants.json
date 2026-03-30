@@ -49,12 +49,12 @@
     "emanation": 9
   },
   "functional_role_counts": {
-    "first_emanation": 1,
     "demiurge": 1,
-    "soul": 1,
-    "source": 1,
+    "matter": 1,
     "intermediary": 6,
-    "matter": 1
+    "first_emanation": 1,
+    "source": 1,
+    "soul": 1
   },
   "depth_profile": {
     "0": [

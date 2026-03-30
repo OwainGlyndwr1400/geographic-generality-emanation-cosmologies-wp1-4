@@ -36,11 +36,11 @@
       "emanation": 1
     },
     "functional_role_counts": {
-      "first_emanation": 1,
-      "soul": 1,
-      "source": 1,
+      "matter": 1,
       "intermediary": 2,
-      "matter": 1
+      "first_emanation": 1,
+      "source": 1,
+      "soul": 1
     },
     "depth_profile": {
       "0": [
@@ -153,11 +153,11 @@
     },
     "functional_role_counts": {
       "demiurge": 1,
-      "soul": 1,
-      "source": 1,
+      "matter": 1,
       "intellect": 1,
       "intermediary": 1,
-      "matter": 1
+      "source": 1,
+      "soul": 1
     },
     "depth_profile": {
       "0": [
@@ -264,15 +264,15 @@
     ],
     "edge_type_counts": {
       "creation": 1,
-      "succession": 2,
-      "emanation": 1
+      "emanation": 1,
+      "succession": 2
     },
     "functional_role_counts": {
-      "first_emanation": 1,
       "demiurge": 1,
-      "source": 1,
+      "matter": 1,
       "intermediary": 1,
-      "matter": 1
+      "first_emanation": 1,
+      "source": 1
     },
     "depth_profile": {
       "0": [
@@ -385,10 +385,10 @@
       "creation": 7
     },
     "functional_role_counts": {
-      "first_emanation": 1,
-      "source": 1,
+      "matter": 2,
       "intermediary": 4,
-      "matter": 2
+      "first_emanation": 1,
+      "source": 1
     },
     "depth_profile": {
       "0": [
@@ -461,6 +461,152 @@
     "has_contraction_edge": false,
     "has_reflection_edge": false
   },
+  "gospel_of_mary": {
+    "tradition": "gospel_of_mary",
+    "node_count": 9,
+    "edge_count": 8,
+    "depth": 8,
+    "diameter": 8,
+    "width": 1,
+    "leaf_count": 1,
+    "branching_node_count": 0,
+    "max_branching_factor": 1,
+    "mean_branching_factor": 1.0,
+    "root": "silence_rest",
+    "leaves": [
+      "material_body"
+    ],
+    "branching_nodes": [],
+    "in_degree_sequence": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "out_degree_sequence": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edge_type_counts": {
+      "emanation": 8
+    },
+    "functional_role_counts": {
+      "matter": 1,
+      "intermediary": 7,
+      "source": 1
+    },
+    "depth_profile": {
+      "0": [
+        "silence_rest"
+      ],
+      "1": [
+        "wrathful_wisdom"
+      ],
+      "2": [
+        "foolish_wisdom"
+      ],
+      "3": [
+        "kingdom_flesh"
+      ],
+      "4": [
+        "zeal_death"
+      ],
+      "5": [
+        "ignorance"
+      ],
+      "6": [
+        "desire"
+      ],
+      "7": [
+        "darkness"
+      ],
+      "8": [
+        "material_body"
+      ]
+    },
+    "role_sequence_by_level": {
+      "0": [
+        "source"
+      ],
+      "1": [
+        "intermediary"
+      ],
+      "2": [
+        "intermediary"
+      ],
+      "3": [
+        "intermediary"
+      ],
+      "4": [
+        "intermediary"
+      ],
+      "5": [
+        "intermediary"
+      ],
+      "6": [
+        "intermediary"
+      ],
+      "7": [
+        "intermediary"
+      ],
+      "8": [
+        "matter"
+      ]
+    },
+    "betweenness_centrality": {
+      "silence_rest": 0.0,
+      "wrathful_wisdom": 0.125,
+      "foolish_wisdom": 0.2143,
+      "kingdom_flesh": 0.2679,
+      "zeal_death": 0.2857,
+      "ignorance": 0.2679,
+      "desire": 0.2143,
+      "darkness": 0.125,
+      "material_body": 0.0
+    },
+    "closeness_centrality": {
+      "silence_rest": 0.0,
+      "wrathful_wisdom": 0.125,
+      "foolish_wisdom": 0.1667,
+      "kingdom_flesh": 0.1875,
+      "zeal_death": 0.2,
+      "ignorance": 0.2083,
+      "desire": 0.2143,
+      "darkness": 0.2188,
+      "material_body": 0.2222
+    },
+    "topological_sort": [
+      "silence_rest",
+      "wrathful_wisdom",
+      "foolish_wisdom",
+      "kingdom_flesh",
+      "zeal_death",
+      "ignorance",
+      "desire",
+      "darkness",
+      "material_body"
+    ],
+    "wl_hash_structure": "6b02e9dc32853fd0570ae977a40665b2",
+    "wl_hash_with_roles": "dd916bf518b7736a749220879951b10b",
+    "is_linear_chain": true,
+    "has_fallen_node": false,
+    "has_process_nodes": false,
+    "has_fragmentation_edge": false,
+    "has_contraction_edge": false,
+    "has_reflection_edge": false
+  },
   "hermetic": {
     "tradition": "hermetic",
     "node_count": 8,
@@ -502,17 +648,17 @@
       3
     ],
     "edge_type_counts": {
-      "reflection": 1,
-      "fragmentation": 1,
       "creation": 3,
-      "emanation": 2
+      "emanation": 2,
+      "reflection": 1,
+      "fragmentation": 1
     },
     "functional_role_counts": {
-      "first_emanation": 1,
       "demiurge": 1,
-      "source": 1,
+      "matter": 2,
       "intermediary": 3,
-      "matter": 2
+      "first_emanation": 1,
+      "source": 1
     },
     "depth_profile": {
       "0": [
@@ -624,17 +770,17 @@
       1
     ],
     "edge_type_counts": {
-      "reflection": 1,
       "creation": 1,
-      "emanation": 4
+      "emanation": 4,
+      "reflection": 1
     },
     "functional_role_counts": {
-      "first_emanation": 1,
-      "soul": 1,
-      "source": 1,
+      "matter": 1,
       "intellect": 1,
       "intermediary": 2,
-      "matter": 1
+      "first_emanation": 1,
+      "source": 1,
+      "soul": 1
     },
     "depth_profile": {
       "0": [
@@ -753,18 +899,18 @@
       1
     ],
     "edge_type_counts": {
-      "fragmentation": 1,
       "creation": 2,
+      "emanation": 2,
       "contraction": 1,
-      "emanation": 2
+      "fragmentation": 1
     },
     "functional_role_counts": {
-      "first_emanation": 1,
-      "source": 1,
+      "process": 2,
+      "matter": 1,
       "intellect": 1,
       "intermediary": 1,
-      "process": 2,
-      "matter": 1
+      "first_emanation": 1,
+      "source": 1
     },
     "depth_profile": {
       "0": [
@@ -899,12 +1045,12 @@
       "emanation": 9
     },
     "functional_role_counts": {
-      "first_emanation": 1,
       "demiurge": 1,
-      "soul": 1,
-      "source": 1,
+      "matter": 1,
       "intermediary": 6,
-      "matter": 1
+      "first_emanation": 1,
+      "source": 1,
+      "soul": 1
     },
     "depth_profile": {
       "0": [
@@ -1035,15 +1181,15 @@
       1
     ],
     "edge_type_counts": {
-      "reflection": 1,
-      "emanation": 3
+      "emanation": 3,
+      "reflection": 1
     },
     "functional_role_counts": {
-      "first_emanation": 1,
-      "soul": 1,
-      "source": 1,
+      "matter": 1,
       "intermediary": 1,
-      "matter": 1
+      "first_emanation": 1,
+      "source": 1,
+      "soul": 1
     },
     "depth_profile": {
       "0": [
@@ -1109,6 +1255,165 @@
     "has_contraction_edge": false,
     "has_reflection_edge": true
   },
+  "popol_vuh_maya": {
+    "tradition": "popol_vuh_maya",
+    "node_count": 11,
+    "edge_count": 10,
+    "depth": 5,
+    "diameter": 6,
+    "width": 4,
+    "leaf_count": 5,
+    "branching_node_count": 2,
+    "max_branching_factor": 4,
+    "mean_branching_factor": 1.6667,
+    "root": "divine_triad",
+    "leaves": [
+      "earth_animals",
+      "mud_people",
+      "sun_moon",
+      "maize_people",
+      "maize_women"
+    ],
+    "branching_nodes": [
+      "creative_speech",
+      "maize_discovery"
+    ],
+    "in_degree_sequence": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "out_degree_sequence": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      2,
+      4
+    ],
+    "edge_type_counts": {
+      "creation": 8,
+      "contraction": 1,
+      "fragmentation": 1
+    },
+    "functional_role_counts": {
+      "fallen": 1,
+      "process": 3,
+      "matter": 5,
+      "intermediary": 1,
+      "source": 1
+    },
+    "depth_profile": {
+      "0": [
+        "divine_triad"
+      ],
+      "1": [
+        "creative_speech"
+      ],
+      "2": [
+        "earth_animals",
+        "mud_people",
+        "wooden_people",
+        "maize_discovery"
+      ],
+      "3": [
+        "xibalba_descent",
+        "maize_people",
+        "maize_women"
+      ],
+      "4": [
+        "hero_twins"
+      ],
+      "5": [
+        "sun_moon"
+      ]
+    },
+    "role_sequence_by_level": {
+      "0": [
+        "source"
+      ],
+      "1": [
+        "process"
+      ],
+      "2": [
+        "matter",
+        "matter",
+        "matter",
+        "process"
+      ],
+      "3": [
+        "fallen",
+        "matter",
+        "matter"
+      ],
+      "4": [
+        "process"
+      ],
+      "5": [
+        "intermediary"
+      ]
+    },
+    "betweenness_centrality": {
+      "divine_triad": 0.0,
+      "creative_speech": 0.1,
+      "earth_animals": 0.0,
+      "mud_people": 0.0,
+      "wooden_people": 0.0667,
+      "xibalba_descent": 0.0667,
+      "hero_twins": 0.0444,
+      "sun_moon": 0.0,
+      "maize_discovery": 0.0444,
+      "maize_people": 0.0,
+      "maize_women": 0.0
+    },
+    "closeness_centrality": {
+      "divine_triad": 0.0,
+      "creative_speech": 0.1,
+      "earth_animals": 0.1333,
+      "mud_people": 0.1333,
+      "wooden_people": 0.1333,
+      "xibalba_descent": 0.15,
+      "hero_twins": 0.16,
+      "sun_moon": 0.1667,
+      "maize_discovery": 0.1333,
+      "maize_people": 0.15,
+      "maize_women": 0.15
+    },
+    "topological_sort": [
+      "divine_triad",
+      "creative_speech",
+      "earth_animals",
+      "mud_people",
+      "wooden_people",
+      "maize_discovery",
+      "xibalba_descent",
+      "maize_people",
+      "maize_women",
+      "hero_twins",
+      "sun_moon"
+    ],
+    "wl_hash_structure": "15885d3dd1eb2bac1601fd28550c3639",
+    "wl_hash_with_roles": "769fc8ba79199c59ad61a3193b385042",
+    "is_linear_chain": false,
+    "has_fallen_node": true,
+    "has_process_nodes": true,
+    "has_fragmentation_edge": true,
+    "has_contraction_edge": true,
+    "has_reflection_edge": false
+  },
   "proclan_neoplatonic": {
     "tradition": "proclan_neoplatonic",
     "node_count": 8,
@@ -1146,16 +1451,16 @@
       1
     ],
     "edge_type_counts": {
-      "reflection": 1,
-      "emanation": 6
+      "emanation": 6,
+      "reflection": 1
     },
     "functional_role_counts": {
-      "first_emanation": 1,
-      "soul": 1,
-      "source": 1,
+      "matter": 1,
       "intellect": 2,
       "intermediary": 2,
-      "matter": 1
+      "first_emanation": 1,
+      "source": 1,
+      "soul": 1
     },
     "depth_profile": {
       "0": [
@@ -1287,12 +1592,12 @@
       "emanation": 5
     },
     "functional_role_counts": {
-      "first_emanation": 1,
-      "soul": 1,
-      "source": 1,
+      "matter": 1,
       "intellect": 1,
       "intermediary": 2,
-      "matter": 1
+      "first_emanation": 1,
+      "source": 1,
+      "soul": 1
     },
     "depth_profile": {
       "0": [
@@ -1413,18 +1718,18 @@
       1
     ],
     "edge_type_counts": {
-      "fragmentation": 2,
       "creation": 2,
-      "emanation": 3
+      "emanation": 3,
+      "fragmentation": 2
     },
     "functional_role_counts": {
-      "first_emanation": 1,
+      "fallen": 1,
       "demiurge": 1,
-      "source": 1,
+      "matter": 1,
       "intellect": 1,
       "intermediary": 2,
-      "fallen": 1,
-      "matter": 1
+      "first_emanation": 1,
+      "source": 1
     },
     "depth_profile": {
       "0": [
@@ -1552,10 +1857,10 @@
       "emanation": 3
     },
     "functional_role_counts": {
-      "first_emanation": 1,
-      "source": 1,
+      "matter": 1,
       "intermediary": 2,
-      "matter": 1
+      "first_emanation": 1,
+      "source": 1
     },
     "depth_profile": {
       "0": [
@@ -1621,6 +1926,130 @@
     "has_contraction_edge": false,
     "has_reflection_edge": false
   },
+  "trimorphic_protennoia": {
+    "tradition": "trimorphic_protennoia",
+    "node_count": 7,
+    "edge_count": 6,
+    "depth": 4,
+    "diameter": 4,
+    "width": 3,
+    "leaf_count": 3,
+    "branching_node_count": 1,
+    "max_branching_factor": 3,
+    "mean_branching_factor": 1.5,
+    "root": "invisible_spirit",
+    "leaves": [
+      "descent_voice",
+      "descent_speech",
+      "souls_rescued"
+    ],
+    "branching_nodes": [
+      "protennoia"
+    ],
+    "in_degree_sequence": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "out_degree_sequence": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      3
+    ],
+    "edge_type_counts": {
+      "creation": 1,
+      "emanation": 4,
+      "contraction": 1
+    },
+    "functional_role_counts": {
+      "process": 1,
+      "intermediary": 3,
+      "first_emanation": 1,
+      "source": 1,
+      "soul": 1
+    },
+    "depth_profile": {
+      "0": [
+        "invisible_spirit"
+      ],
+      "1": [
+        "protennoia"
+      ],
+      "2": [
+        "descent_voice",
+        "descent_speech",
+        "descent_logos"
+      ],
+      "3": [
+        "five_seals"
+      ],
+      "4": [
+        "souls_rescued"
+      ]
+    },
+    "role_sequence_by_level": {
+      "0": [
+        "source"
+      ],
+      "1": [
+        "first_emanation"
+      ],
+      "2": [
+        "intermediary",
+        "intermediary",
+        "intermediary"
+      ],
+      "3": [
+        "process"
+      ],
+      "4": [
+        "soul"
+      ]
+    },
+    "betweenness_centrality": {
+      "invisible_spirit": 0.0,
+      "protennoia": 0.1667,
+      "descent_voice": 0.0,
+      "descent_speech": 0.0,
+      "descent_logos": 0.1333,
+      "five_seals": 0.1,
+      "souls_rescued": 0.0
+    },
+    "closeness_centrality": {
+      "invisible_spirit": 0.0,
+      "protennoia": 0.1667,
+      "descent_voice": 0.2222,
+      "descent_speech": 0.2222,
+      "descent_logos": 0.2222,
+      "five_seals": 0.25,
+      "souls_rescued": 0.2667
+    },
+    "topological_sort": [
+      "invisible_spirit",
+      "protennoia",
+      "descent_voice",
+      "descent_speech",
+      "descent_logos",
+      "five_seals",
+      "souls_rescued"
+    ],
+    "wl_hash_structure": "70fceeaeddfc02cbaea963ab97701ce5",
+    "wl_hash_with_roles": "8a1cd01febc4c8394511cb949a688fa5",
+    "is_linear_chain": false,
+    "has_fallen_node": false,
+    "has_process_nodes": true,
+    "has_fragmentation_edge": false,
+    "has_contraction_edge": true,
+    "has_reflection_edge": false
+  },
   "valentinian_gnostic": {
     "tradition": "valentinian_gnostic",
     "node_count": 9,
@@ -1663,18 +2092,18 @@
       2
     ],
     "edge_type_counts": {
-      "fragmentation": 2,
       "creation": 2,
-      "emanation": 4
+      "emanation": 4,
+      "fragmentation": 2
     },
     "functional_role_counts": {
-      "first_emanation": 1,
+      "fallen": 1,
       "demiurge": 1,
-      "source": 1,
+      "matter": 1,
       "intellect": 1,
       "intermediary": 3,
-      "fallen": 1,
-      "matter": 1
+      "first_emanation": 1,
+      "source": 1
     },
     "depth_profile": {
       "0": [
