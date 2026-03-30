@@ -55,8 +55,10 @@ CONTROLS_DIR = os.path.join(_HERE, "..", "outputs", "invariants", "controls")
 N_POOLED = 1000
 N_STRATIFIED = 1000
 
-# Empirical node-count distribution of the corpus (14 schemas, WP 1.3)
-CORPUS_NODE_COUNTS = [5, 5, 5, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 11]
+# Empirical node-count distribution of the corpus (17 schemas, WP 1.4)
+# WP 1.3 (14): [5,5,5,6,6,7,7,7,8,8,8,9,9,11]
+# WP 1.4 adds: Trimorphic Protennoia (7), Gospel of Mary (9), Popol Vuh (11)
+CORPUS_NODE_COUNTS = [5, 5, 5, 6, 6, 7, 7, 7, 7, 8, 8, 8, 9, 9, 9, 11, 11]
 
 
 # ---------------------------------------------------------------------------

@@ -147,6 +147,10 @@ def fig1_schema_dags(schemas: dict) -> str:
         "bundahishn_zoroastrian",
         "manichaean",
         "derveni_orphic",
+        # WP 1.4 additions
+        "popol_vuh_maya",
+        "trimorphic_protennoia",
+        "gospel_of_mary",
     ]
     traditions = [t for t in tradition_order if t in schemas]
     # Append any not in the order list

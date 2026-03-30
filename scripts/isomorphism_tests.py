@@ -140,6 +140,42 @@ def _edge_subst_cost(attrs1, attrs2):
     return 0.0 if e1 == e2 else 1.0
 
 
+# ---------------------------------------------------------------------------
+# Edge-weighted GED: semantic edge-type similarity costs (WP 1.4)
+# ---------------------------------------------------------------------------
+
+# Cost matrix for edge-type substitution in weighted GED.
+# Same type = 0.0, related pair = 0.5, unrelated = 1.0 (default), opposites = 1.5
+_EDGE_TYPE_COSTS = {
+    # Related pairs (processes that are conceptually close)
+    ("emanation", "creation"): 0.5,
+    ("creation", "emanation"): 0.5,
+    ("fragmentation", "contraction"): 0.5,
+    ("contraction", "fragmentation"): 0.5,
+    ("reflection", "succession"): 0.5,
+    ("succession", "reflection"): 0.5,
+    # Opposite pairs (processes that are conceptually opposed)
+    ("creation", "fragmentation"): 1.5,
+    ("fragmentation", "creation"): 1.5,
+    ("emanation", "contraction"): 1.5,
+    ("contraction", "emanation"): 1.5,
+}
+
+
+def _edge_subst_cost_weighted(attrs1, attrs2):
+    """Edge substitution cost using semantic edge-type similarity.
+
+    Same type = 0.0, related pair = 0.5, unrelated = 1.0, opposites = 1.5.
+    Related: emanation/creation, fragmentation/contraction, reflection/succession.
+    Opposites: creation/fragmentation, emanation/contraction.
+    """
+    r1 = attrs1.get("relationship", "")
+    r2 = attrs2.get("relationship", "")
+    if r1 == r2:
+        return 0.0
+    return _EDGE_TYPE_COSTS.get((r1, r2), 1.0)
+
+
 def test_b_ged(graphs: dict) -> dict:
     """
     Compute structural and role-labeled GED for all 15 pairs.
@@ -169,6 +205,40 @@ def test_b_ged(graphs: dict) -> dict:
             "role_ged": round(role_ged, 4) if role_ged is not None else None,
             "normalized_structural_ged": round(struct_ged * 2 / denom, 4) if struct_ged is not None else None,
             "normalized_role_ged": round(role_ged * 2 / denom, 4) if role_ged is not None else None,
+        }
+
+    return results
+
+
+def test_b_weighted_ged(graphs: dict) -> dict:
+    """
+    Compute edge-weighted GED for all pairs (WP 1.4 extension).
+
+    Uses semantic edge-type similarity costs to distinguish traditions that
+    are structurally isomorphic (GED=0) but use different edge types.
+    E.g., Derveni (succession) vs. Plotinus (emanation) should have weighted GED > 0.
+    """
+    traditions = sorted(graphs.keys())
+    results = {}
+
+    for a, b in _pairs(traditions):
+        Ga, Gb = graphs[a], graphs[b]
+        denom = (Ga.number_of_nodes() + Ga.number_of_edges()
+                 + Gb.number_of_nodes() + Gb.number_of_edges())
+
+        ged = nx.graph_edit_distance(
+            Ga, Gb,
+            node_subst_cost=_role_subst_cost,
+            edge_subst_cost=_edge_subst_cost_weighted,
+            timeout=GED_TIMEOUT,
+        )
+
+        results[_matrix_key(a, b)] = {
+            "weighted_ged": round(ged, 4) if ged is not None else None,
+            "normalized_weighted_ged": (
+                round(ged * 2 / denom, 4)
+                if ged is not None and denom > 0 else None
+            ),
         }
 
     return results
@@ -423,6 +493,7 @@ def run_all(schemas_dir: str = SCHEMAS_DIR) -> dict:
     results = {}
     results["test_a_isomorphism"] = test_a_exact_isomorphism(graphs)
     results["test_b_ged"] = test_b_ged(graphs)
+    results["test_b_weighted_ged"] = test_b_weighted_ged(graphs)
     wl_struct, wl_roles = test_c_wl_similarity(graphs)
     results["test_c_wl_structural"] = wl_struct
     results["test_c_wl_roles"] = wl_roles
@@ -435,6 +506,7 @@ def run_all(schemas_dir: str = SCHEMAS_DIR) -> dict:
     _save(os.path.join(SIM_DIR, "role_ged.json"),
           {k: {"role_ged": v["role_ged"], "normalized_role_ged": v["normalized_role_ged"]}
            for k, v in results["test_b_ged"].items()})
+    _save(os.path.join(SIM_DIR, "weighted_ged.json"), results["test_b_weighted_ged"])
     _save(os.path.join(SIM_DIR, "wl_structural.json"), results["test_c_wl_structural"])
     _save(os.path.join(SIM_DIR, "wl_roles.json"), results["test_c_wl_roles"])
     _save(os.path.join(SIM_DIR, "role_levenshtein.json"), results["test_d_role_levenshtein"])
@@ -496,6 +568,30 @@ def print_report(results: dict, graphs: dict, invs: dict) -> None:
     _sep()
     print("  sGED=structural GED  rGED=role-labeled GED  "
           "nGED=normalized (lower=more similar)")
+
+    # --- Test B (weighted): Edge-weighted GED ---
+    print("\n  TEST B (WEIGHTED): Edge-Weighted GED (semantic edge-type costs)")
+    _sep()
+    print(f"  {'Pair':<55}  wGED  nwGED")
+    _sep()
+    tbw = results.get("test_b_weighted_ged", {})
+    # Show only pairs where weighted GED differs from structural GED
+    divergent = []
+    for pair in sorted(tbw.keys()):
+        wged = tbw[pair]["weighted_ged"]
+        sged = tb.get(pair, {}).get("structural_ged")
+        if wged is not None and sged is not None and abs(wged - sged) > 0.01:
+            divergent.append(pair)
+    if divergent:
+        print("  Pairs where weighted GED differs from structural GED:")
+        for pair in sorted(divergent, key=lambda p: tbw[p]["weighted_ged"]):
+            wged = tbw[pair]["weighted_ged"]
+            nwged = tbw[pair]["normalized_weighted_ged"]
+            sged = tb[pair]["structural_ged"]
+            print(f"  {pair:<55}  {wged:>4}  {nwged:.3f}  (sGED={sged})")
+    else:
+        print("  No divergence between weighted and structural GED.")
+    _sep()
 
     # --- Test C: WL similarity ranked ---
     print("\n  TEST C: Weisfeiler-Leman Similarity (3 iterations)")
