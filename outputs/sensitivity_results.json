@@ -1,0 +1,149 @@
+{
+  "primary": {
+    "intra_chain": 3.2,
+    "intra_branch": 8.0,
+    "inter_family": 7.6364,
+    "separation_ratio": 2.3864,
+    "n_chains": 11,
+    "n_branches": 6
+  },
+  "primary_families": {
+    "linear_chain": [
+      "bundahishn_zoroastrian",
+      "chaldean",
+      "derveni_orphic",
+      "gospel_of_mary",
+      "ishraq_illuminationist",
+      "lurianic_kabbalistic",
+      "plotinian_neoplatonic",
+      "proclan_neoplatonic",
+      "samkhya",
+      "sethian_gnostic",
+      "taoist_ddj"
+    ],
+    "branching_tree": [
+      "genesis_creationist",
+      "hermetic",
+      "manichaean",
+      "popol_vuh_maya",
+      "trimorphic_protennoia",
+      "valentinian_gnostic"
+    ]
+  },
+  "alt1_ishraq_branching": {
+    "intra_chain": 3.3778,
+    "intra_branch": 7.5238,
+    "inter_family": 7.0571,
+    "separation_ratio": 2.0893,
+    "n_chains": 10,
+    "n_branches": 7
+  },
+  "alt1_families": {
+    "linear_chain": [
+      "bundahishn_zoroastrian",
+      "chaldean",
+      "derveni_orphic",
+      "gospel_of_mary",
+      "lurianic_kabbalistic",
+      "plotinian_neoplatonic",
+      "proclan_neoplatonic",
+      "samkhya",
+      "sethian_gnostic",
+      "taoist_ddj"
+    ],
+    "branching_tree": [
+      "genesis_creationist",
+      "hermetic",
+      "ishraq_illuminationist",
+      "manichaean",
+      "popol_vuh_maya",
+      "trimorphic_protennoia",
+      "valentinian_gnostic"
+    ]
+  },
+  "alt1_ishraq_samkhya_ged": 2.0,
+  "alt2_zurvanite": {
+    "intra_chain": 3.3333,
+    "intra_branch": 7.619,
+    "inter_family": 7.0571,
+    "separation_ratio": 2.1171,
+    "n_chains": 10,
+    "n_branches": 7
+  },
+  "alt2_families": {
+    "linear_chain": [
+      "chaldean",
+      "derveni_orphic",
+      "gospel_of_mary",
+      "ishraq_illuminationist",
+      "lurianic_kabbalistic",
+      "plotinian_neoplatonic",
+      "proclan_neoplatonic",
+      "samkhya",
+      "sethian_gnostic",
+      "taoist_ddj"
+    ],
+    "branching_tree": [
+      "bundahishn_zoroastrian",
+      "genesis_creationist",
+      "hermetic",
+      "manichaean",
+      "popol_vuh_maya",
+      "trimorphic_protennoia",
+      "valentinian_gnostic"
+    ]
+  },
+  "alt2_bundahishn_ishraq_ged": 2.0,
+  "alt3_popol_vuh_no_xibalba": {
+    "intra_chain": 3.2,
+    "intra_branch": 7.4,
+    "inter_family": 7.1667,
+    "separation_ratio": 2.2396,
+    "n_chains": 11,
+    "n_branches": 6
+  },
+  "alt3_popol_vuh_classification": "branching_tree",
+  "alt3_popol_vuh_node_count": 8,
+  "alt3_popol_vuh_max_branching": 4,
+  "alt4_gospel_direction_sensitive": {
+    "classification": "linear_chain",
+    "ged_values_changed": 0,
+    "ged_values_total": 16,
+    "direction_agnostic_validated": true
+  },
+  "subclustering": {
+    "small_cluster": [
+      "derveni_orphic",
+      "plotinian_neoplatonic",
+      "taoist_ddj",
+      "bundahishn_zoroastrian",
+      "chaldean"
+    ],
+    "large_cluster": [
+      "ishraq_illuminationist",
+      "lurianic_kabbalistic",
+      "samkhya",
+      "proclan_neoplatonic",
+      "sethian_gnostic",
+      "gospel_of_mary"
+    ],
+    "intra_small": 1.2,
+    "intra_large": 1.8667,
+    "inter_cluster": 4.5333,
+    "sub_separation_ratio": 3.7778,
+    "mean_silhouette": 0.6343,
+    "silhouettes": {
+      "derveni_orphic": 0.8125,
+      "plotinian_neoplatonic": 0.8125,
+      "taoist_ddj": 0.8125,
+      "bundahishn_zoroastrian": 0.55,
+      "chaldean": 0.55,
+      "ishraq_illuminationist": 0.5,
+      "lurianic_kabbalistic": 0.5,
+      "samkhya": 0.5,
+      "proclan_neoplatonic": 0.6923,
+      "sethian_gnostic": 0.6923,
+      "gospel_of_mary": 0.5556
+    }
+  }
+}

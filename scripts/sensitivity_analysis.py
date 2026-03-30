@@ -1,11 +1,13 @@
 """
 sensitivity_analysis.py
-WP 1.3 -- Sensitivity Analysis & Sub-Clustering
+WP 1.4 -- Sensitivity Analysis & Sub-Clustering
 
-Three analyses:
+Five analyses:
 1. Branching alternatives (Suhrawardi, Zurvanite Bundahishn) -- reclassify and measure impact
-2. Sub-clustering within the linear-chain family by node count
-3. Full pipeline re-run under branching alternatives (optional)
+2. Popol Vuh without-Xibalba alternative -- reclassifies branching tree to linear chain
+3. Gospel of Mary direction-sensitive alternative -- verifies direction-agnostic approach
+4. Sub-clustering within the linear-chain family by node count
+5. Summary comparison table
 
 Usage:
     python sensitivity_analysis.py
@@ -48,6 +50,51 @@ def build_ishraq_branching(schemas):
                    relationship="emanation",
                    description="Branching alt: longitudinal chain directly generates accidental lights")
     return G
+
+
+def build_popol_vuh_no_xibalba(schemas):
+    """Build Popol Vuh without-Xibalba alternative: remove Hero Twin cycle.
+
+    Removes xibalba_descent, hero_twins, sun_moon nodes and their edges.
+    Adds direct edge wooden_people -> maize_discovery.
+    Result: 8-node schema that should reclassify from branching tree to linear chain
+    (creative_speech still has out-degree 4: earth_animals, mud, wood, maize_discovery).
+    Actually remains branching (factor 4) even without Xibalba due to the 3 creation attempts.
+    But the Xibalba side-branch is removed.
+    """
+    G_orig, data = schemas["popol_vuh_maya"]
+    G = G_orig.copy()
+    # Remove the Xibalba cycle nodes
+    for node in ["xibalba_descent", "hero_twins", "sun_moon"]:
+        if node in G:
+            G.remove_node(node)
+    # Add direct edge from wooden_people to maize_discovery
+    if not G.has_edge("wooden_people", "maize_discovery"):
+        G.add_edge("wooden_people", "maize_discovery",
+                   relationship="creation",
+                   description="Direct progression from failed Wood to Maize discovery (Xibalba omitted)")
+    return G
+
+
+def build_gospel_mary_ascending(schemas):
+    """Build Gospel of Mary direction-sensitive alternative: reverse all edges.
+
+    Changes edge types from emanation to contraction (soul ascending, not descending).
+    Reverses direction: material_body becomes root, silence_rest becomes leaf.
+    Topologically identical (linear chain, depth 8) but semantically inverted.
+    """
+    G_orig, data = schemas["gospel_of_mary"]
+    G_rev = nx.DiGraph()
+    # Copy all nodes
+    for node, attrs in G_orig.nodes(data=True):
+        G_rev.add_node(node, **attrs)
+    # Reverse all edges and change type to contraction
+    for u, v, attrs in G_orig.edges(data=True):
+        new_attrs = dict(attrs)
+        new_attrs["relationship"] = "contraction"
+        new_attrs["description"] = f"Soul ascends: {v} -> {u} (reversed)"
+        G_rev.add_edge(v, u, **new_attrs)
+    return G_rev
 
 
 def build_zurvanite_bundahishn(schemas):
@@ -248,7 +295,7 @@ def main():
 
     print()
     _sep("=")
-    print("  WP 1.3 -- Sensitivity Analysis & Sub-Clustering")
+    print("  WP 1.4 -- Sensitivity Analysis & Sub-Clustering")
     _sep("=")
 
     # Load primary schemas
@@ -259,7 +306,7 @@ def main():
     # ANALYSIS 1: Primary corpus family classification (already done by pipeline,
     # but we recompute here for the sensitivity comparison baseline)
     # -----------------------------------------------------------------------
-    print("\n  BASELINE: Primary Corpus (14 schemas)")
+    print("\n  BASELINE: Primary Corpus (17 schemas)")
     _sep()
 
     # Load pre-computed GED matrix if available
@@ -377,7 +424,103 @@ def main():
     print(f"  (Was 2.0 under primary encoding)")
 
     # -----------------------------------------------------------------------
-    # ANALYSIS 4: Sub-clustering within linear-chain family
+    # ANALYSIS 3b: Popol Vuh without-Xibalba alternative (WP 1.4)
+    # -----------------------------------------------------------------------
+    print("\n\n  SENSITIVITY 3: Popol Vuh Without-Xibalba Alternative")
+    _sep()
+    print("  Removing Hero Twin / Xibalba cycle (3 nodes, 3 edges).")
+    print("  Tests whether Popol Vuh remains branching tree without the side-branch.")
+
+    alt_popol = build_popol_vuh_no_xibalba(schemas)
+    alt3_graphs = dict(primary_graphs)
+    alt3_graphs["popol_vuh_maya"] = alt_popol
+
+    alt3_families = classify_families(alt3_graphs)
+    popol_class = "branching_tree" if "popol_vuh_maya" in alt3_families.get("branching_tree", []) else "linear_chain"
+    popol_nodes = alt_popol.number_of_nodes()
+    popol_mb = compute_max_branching(alt_popol)
+
+    print(f"  Without-Xibalba: {popol_nodes} nodes, max_branching={popol_mb}")
+    print(f"  Classification: {popol_class}")
+    if popol_class == "branching_tree":
+        print("  --> Still branching tree (creative_speech has out-degree > 1 from 3 creation attempts).")
+        print("  --> Xibalba removal does NOT change family assignment.")
+    else:
+        print("  --> Reclassified to linear chain! Xibalba was the sole source of branching.")
+        print("  --> This weakens the geographic generalisation claim.")
+
+    # Compute GED for affected pairs
+    print("  Computing GED for affected pairs...")
+    alt3_ged = dict(primary_ged)
+    for other in alt3_graphs:
+        if other == "popol_vuh_maya":
+            continue
+        ged_val = nx.graph_edit_distance(alt_popol, alt3_graphs[other], timeout=GED_TIMEOUT)
+        if ged_val is None:
+            ged_val = float("inf")
+        alt3_ged[("popol_vuh_maya", other)] = ged_val
+        alt3_ged[(other, "popol_vuh_maya")] = ged_val
+    alt3_ged[("popol_vuh_maya", "popol_vuh_maya")] = 0.0
+
+    alt3_full_families = classify_families(alt3_graphs)
+    alt3_stats = family_stats(alt3_full_families, alt3_ged, list(alt3_graphs.keys()))
+
+    print(f"  Linear chains ({alt3_stats['n_chains']}): {', '.join(sorted(alt3_full_families['linear_chain']))}")
+    print(f"  Branching trees ({alt3_stats['n_branches']}): {', '.join(sorted(alt3_full_families['branching_tree']))}")
+    print(f"  Separation ratio: {alt3_stats['separation_ratio']}x")
+
+    # -----------------------------------------------------------------------
+    # ANALYSIS 3c: Gospel of Mary direction-sensitive (WP 1.4)
+    # -----------------------------------------------------------------------
+    print("\n\n  SENSITIVITY 4: Gospel of Mary Direction-Sensitive (Ascending)")
+    _sep()
+    print("  Reversing all edges; changing emanation -> contraction.")
+    print("  Tests whether direction affects GED comparisons.")
+
+    alt_gospel = build_gospel_mary_ascending(schemas)
+    alt4_graphs = dict(primary_graphs)
+    alt4_graphs["gospel_of_mary"] = alt_gospel
+
+    # Compute GED for affected pairs
+    print("  Computing GED for affected pairs...")
+    alt4_ged = dict(primary_ged)
+    for other in alt4_graphs:
+        if other == "gospel_of_mary":
+            continue
+        ged_val = nx.graph_edit_distance(alt_gospel, alt4_graphs[other], timeout=GED_TIMEOUT)
+        if ged_val is None:
+            ged_val = float("inf")
+        alt4_ged[("gospel_of_mary", other)] = ged_val
+        alt4_ged[(other, "gospel_of_mary")] = ged_val
+    alt4_ged[("gospel_of_mary", "gospel_of_mary")] = 0.0
+
+    alt4_families = classify_families(alt4_graphs)
+    gospel_class = "linear_chain" if "gospel_of_mary" in alt4_families.get("linear_chain", []) else "branching_tree"
+    print(f"  Classification under reversal: {gospel_class}")
+
+    # Compare GED values: original vs reversed
+    n_changed = 0
+    n_total = 0
+    for other in primary_graphs:
+        if other == "gospel_of_mary":
+            continue
+        orig = primary_ged.get(("gospel_of_mary", other), None)
+        rev = alt4_ged.get(("gospel_of_mary", other), None)
+        if orig is not None and rev is not None:
+            n_total += 1
+            if abs(orig - rev) > 0.01:
+                n_changed += 1
+                print(f"  CHANGED: gospel_of_mary vs {other}: {orig} -> {rev}")
+
+    if n_changed == 0:
+        print(f"  --> ALL {n_total} GED values UNCHANGED under direction reversal.")
+        print("  --> Direction-agnostic approach is validated: topology is direction-invariant.")
+    else:
+        print(f"  --> {n_changed}/{n_total} GED values changed under direction reversal.")
+        print("  --> Direction matters for structural comparison. Note in paper.")
+
+    # -----------------------------------------------------------------------
+    # ANALYSIS 5: Sub-clustering within linear-chain family
     # -----------------------------------------------------------------------
     subcluster_results = subclustering_analysis(schemas, primary_ged)
 
@@ -389,9 +532,10 @@ def main():
     print(f"  {'Scenario':<35} {'Chains':>6} {'Branch':>6} {'Intra-C':>8} {'Intra-B':>8} {'Inter':>8} {'Sep':>8}")
     _sep()
     rows = [
-        ("Primary (14 schemas)", primary_stats),
+        ("Primary (17 schemas)", primary_stats),
         ("Alt 1: Ishraq branching", alt1_stats),
         ("Alt 2: Zurvanite Bundahishn", alt2_stats),
+        ("Alt 3: Popol Vuh no Xibalba", alt3_stats),
     ]
     for label, s in rows:
         print(f"  {label:<35} {s['n_chains']:>6} {s['n_branches']:>6} {s['intra_chain']:>8.4f} {s['intra_branch']:>8.4f} {s['inter_family']:>8.4f} {s['separation_ratio']:>7.4f}x")
@@ -409,6 +553,16 @@ def main():
         "alt2_zurvanite": alt2_stats,
         "alt2_families": alt2_families,
         "alt2_bundahishn_ishraq_ged": bund_ishraq,
+        "alt3_popol_vuh_no_xibalba": alt3_stats,
+        "alt3_popol_vuh_classification": popol_class,
+        "alt3_popol_vuh_node_count": popol_nodes,
+        "alt3_popol_vuh_max_branching": popol_mb,
+        "alt4_gospel_direction_sensitive": {
+            "classification": gospel_class,
+            "ged_values_changed": n_changed,
+            "ged_values_total": n_total,
+            "direction_agnostic_validated": n_changed == 0,
+        },
         "subclustering": subcluster_results,
     }
 
