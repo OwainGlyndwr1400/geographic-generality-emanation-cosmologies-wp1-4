@@ -1,4 +1,4 @@
-# Geographic Generality of the Two-Family Attractor: Mesoamerican, Gnostic, and Direction-Agnostic Extensions to the Emanation Topology Corpus (17 Traditions)
+Geographic Generality of the Two-Family Attractor: Mesoamerican, Gnostic, and Direction-Agnostic Extensions to the Emanation Topology Corpus (17 Traditions)
 
 **Erydir Ceisiwr**
 Independent Researcher, Awen Grid Programme, Swansea, Wales, United Kingdom
@@ -14,7 +14,7 @@ ORCID: 0009-0004-4577-5253
 
 **Findings.** (i) Family stability confirmed at 17 traditions: 11 linear chains, 6 branching trees; separation ratio = 2.39x (Established). (ii) The Popol Vuh classified as a branching tree (branching factor 4), the first non-Mediterranean/Near Eastern/Indian/Chinese tradition in the corpus, constituting the strongest evidence yet for cross-cultural structural attractors (Established). (iii) Edge-weighted GED resolved all 8 prior structural isomorphisms (GED = 0 pairs), including the Derveni-Plotinus-Taoist triple: weighted GED = 5.0 (Derveni-Plotinus), 3.0 (Derveni-Taoist), 2.0 (Plotinus-Taoist) (Established). Every pair in the 17-tradition corpus showed non-zero weighted GED divergence from structural GED (136/136 pairs). (iv) Direction-agnostic encoding validated: the Gospel of Mary's GED values were identical under edge reversal for all 16 comparisons (Established). (v) The Gospel of Mary is the deepest linear chain in the corpus (depth 8, p = 0.013 against its size-matched null; Established). (vi) Trimorphic Protennoia introduced the fourth branching mode (parallel self-expression), distinct from emanative (Hermetic), error-driven (Valentinian), and mission-driven (Manichaean) branching. (vii) Linear chain overrepresentation remained significant: 11/17 = 64.7%, p < 0.0001 against the per-tradition null (Established). (viii) Sub-clustering within the linear-chain family yielded silhouette = 0.63 (strong), with compact chains (N <= 6, 5 members) and deep chains (N >= 7, 6 members including Gospel of Mary).
 
-**Originality/value.** This is the third corpus expansion and the first to introduce a tradition from a geographically isolated civilisation. The Popol Vuh result transforms the two-family attractor from a Mediterranean/Asian pattern into a pan-human structural invariant. The edge-weighted GED methodology provides a principled way to distinguish topological identity from semantic identity, resolving a limitation identified in Ceisiwr (2026c). The direction-agnostic validation extends the protocol's applicability to ascending, descending, and bidirectional cosmologies without loss of comparative power.
+**Originality/value.** This is the third corpus expansion and the first to introduce a tradition from a geographically isolated civilisation. The Popol Vuh result constitutes the strongest evidence to date that the two-family attractor is not a regional Mediterranean/Asian diffusion pattern but a structurally independent phenomenon — an inference consistent with a pan-human constraint on hierarchical cosmological reasoning. The edge-weighted GED methodology provides a principled way to distinguish topological identity from semantic identity, resolving a limitation identified in Ceisiwr (2026c). The direction-agnostic validation extends the protocol's applicability to ascending, descending, and bidirectional cosmologies without loss of comparative power.
 
 **Keywords:** emanation hierarchies; graph theory; Popol Vuh; Mesoamerican cosmology; Gnostic texts; Trimorphic Protennoia; Gospel of Mary; cross-cultural convergence; graph edit distance; edge-weighted GED; digital humanities; structural attractors; direction-agnostic encoding
 
@@ -42,7 +42,7 @@ In addition to these three new schemas, we introduce a new analytical tool: **ed
 
 **Prediction 1 (Family stability).** The two-family classification will remain stable at 17 traditions with a separation ratio above 2.0x. The Popol Vuh and Trimorphic Protennoia will classify as branching trees; the Gospel of Mary will classify as a linear chain.
 
-**Prediction 2 (Geographic generality).** The Popol Vuh, with zero contact to any existing corpus tradition, will independently converge on the branching-tree attractor, demonstrating that the two-family structure is a cross-cultural invariant rather than a diffusion artifact.
+**Prediction 2 (Geographic generality).** The Popol Vuh, with no documented contact relevant to the cosmological structures under study, will independently converge on the branching-tree attractor — evidence that the two-family structure is not a diffusion artifact.
 
 **Prediction 3 (Edge-weighted GED resolution).** The edge-weighted GED will resolve all 8 prior structural isomorphisms (GED = 0 pairs), assigning non-zero distances to pairs that use different edge types despite identical topology.
 
@@ -58,7 +58,7 @@ All three traditions were encoded following the seven-rule DAG contract establis
 
 ### 2.2 Popol Vuh Schema
 
-**Primary sources:** Christenson, A. J. (2007) *Popol Vuh: Sacred Book of the Ancient K'iche' Maya*. University of Oklahoma Press; Tedlock, D. (1985) *Popol Vuh: The Definitive Edition*. Simon & Schuster.
+**Primary sources:** Christenson, A. J. (2007) *Popol Vuh: The Sacred Book of the Maya*. Norman: University of Oklahoma Press; Tedlock, D. (1985) *Popol Vuh: The Definitive Edition of the Mayan Book of the Dawn of Life and the Glories of Gods and Kings*. New York: Simon & Schuster.
 
 **Encoding (11 nodes, depth 6, branching tree, max branching factor 4):**
 
@@ -161,7 +161,7 @@ Additionally, a dedicated sensitivity analysis tested four alternative encodings
 
 ### 2.7 Software and Data Availability
 
-All schemas, scripts, and outputs are available in the project repository: [GitHub URL to be added upon publication]. The pipeline requires Python 3.10+, NetworkX, NumPy, SciPy, and matplotlib.
+All schemas, scripts, and outputs are available in the project repository: https://github.com/OwainGlyndwr1400/geographic-generality-emanation-cosmologies-wp1-4. The pipeline requires Python 3.10+, NetworkX, NumPy, SciPy, and matplotlib.
 
 ---
 
@@ -203,7 +203,7 @@ The Popol Vuh's per-tradition extremity test (Test 1) shows that its depth (5) i
 
 The Popol Vuh also contributes the most diverse edge-type profile in the corpus: creation (7 edges), fragmentation (1), and contraction (1). No other tradition uses creation, fragmentation, *and* contraction edges. This is reflected in the weighted GED: Popol Vuh has the highest mean weighted GED to all other traditions (mean = 17.2), nearly double its mean structural GED (mean = 9.3) (Established).
 
-**Prediction 2 confirmed.** The Popol Vuh independently converged on the branching-tree attractor despite zero contact with any other corpus tradition. This extends the two-family attractor from a Mediterranean/Asian pattern to a pan-human structural invariant.
+**Prediction 2 confirmed.** The Popol Vuh independently converged on the branching-tree attractor despite no documented contact with any other corpus tradition's cultural sphere. This is the strongest evidence to date that the two-family attractor reflects a structural constraint independent of regional intellectual exchange.
 
 ### 3.3 Edge-Weighted GED: Resolving Structural Isomorphisms
 
@@ -348,21 +348,21 @@ The direction-agnostic encoding is validated for linear chains (Gospel of Mary),
 
 ## References
 
-Allberry, C. R. C. (ed.) (1938). *A Manichaean Psalm-Book, Part II.* Manichaean Manuscripts in the Chester Beatty Collection, Vol. II. Stuttgart: Kohlhammer.
+Allberry, C. R. C. (ed.) (1938). *A Manichaean Psalm-Book. Part II.* Manichaean Manuscripts in the Chester Beatty Collection, Vol. II. Stuttgart: W. Kohlhammer.
 
 Anklesaria, B. T. (trans.) (1956). *Zand-Akasih: Iranian or Greater Bundahishn.* Bombay.
 
-Boyce, M. (1975-1991). *A History of Zoroastrianism.* 3 vols. Leiden: Brill.
+Boyce, M. (with F. Grenet, Vol. III) (1975–1991). *A History of Zoroastrianism.* 3 vols. Leiden: Brill.
 
 Bremmer, J. N. (2008). *Greek Religion and Culture, the Bible, and the Ancient Near East.* Jerusalem Studies in Religion and Culture 8. Leiden: Brill.
 
 Ceisiwr, E. (2026a). "The Emanation Topology: A Graph-Theoretic Analysis of Cosmological Hierarchies Across Nine Traditions." Zenodo. DOI: [pending].
 
-Ceisiwr, E. (2026b). "Proclean and Ishraqi Extensions to the Emanation Topology Corpus (11 Traditions)." Zenodo. DOI: [pending].
+Ceisiwr, E. (2026b). "Proclean and Ishraqi Extensions to the Emanation Topology Corpus (11 Traditions)." Zenodo. https://doi.org/10.5281/zenodo.19305988
 
-Ceisiwr, E. (2026c). "Zoroastrian, Manichaean, and Orphic Extensions to the Emanation Topology Corpus: Family Stability and Sub-Clustering at 14 Traditions." Zenodo. DOI: [pending].
+Ceisiwr, E. (2026c). "Zoroastrian, Manichaean, and Orphic Extensions to the Emanation Topology Corpus: Family Stability and Sub-Clustering at 14 Traditions." Zenodo. https://doi.org/10.5281/zenodo.19324327
 
-Christenson, A. J. (2007). *Popol Vuh: Sacred Book of the Ancient K'iche' Maya.* University of Oklahoma Press.
+Christenson, A. J. (trans.) (2007). *Popol Vuh: The Sacred Book of the Maya.* Norman: University of Oklahoma Press.
 
 Gardner, I. & Lieu, S. N. C. (2004). *Manichaean Texts from the Roman Empire.* Cambridge University Press.
 
@@ -372,11 +372,11 @@ Kouremenos, T., Parassoglou, G. M., & Tsantsanoglou, K. (2006). *The Derveni Pap
 
 Layton, B. (1987). *The Gnostic Scriptures.* Garden City, NY: Doubleday.
 
-Pasquier, A. (1983). *L'Evangile selon Marie (BG 1).* Bibliotheque copte de Nag Hammadi, Section "Textes" 10. Quebec: Laval University Press.
+Pasquier, A. (1983). *L'Évangile selon Marie (BG 1).* Bibliothèque copte de Nag Hammadi, Section «Textes» 10. Québec: Les Presses de l'Université Laval.
 
 Robinson, J. M. (ed.) (1988). *The Nag Hammadi Library in English.* 3rd ed. San Francisco: Harper & Row.
 
-Tedlock, D. (1985). *Popol Vuh: The Definitive Edition of the Maya Book of the Dawn of Life and the Glories of Gods and Kings.* New York: Simon & Schuster.
+Tedlock, D. (trans.) (1985). *Popol Vuh: The Definitive Edition of the Mayan Book of the Dawn of Life and the Glories of Gods and Kings.* New York: Simon & Schuster.
 
 Tuckett, C. M. (2007). *The Gospel of Mary.* Oxford Early Christian Gospel Texts. Oxford: Oxford University Press.
 
@@ -384,4 +384,4 @@ Turner, J. D. (1990). "Trimorphic Protennoia." In *Nag Hammadi Codices XI, XII, 
 
 West, M. L. (1983). *The Orphic Poems.* Oxford: Clarendon Press.
 
-Zaehner, R. C. (1955). *Zurvan: A Zoroastrian Dilemma.* Oxford: Clarendon Press.
+Zaehner, R. C. (1955). *Zurvan, a Zoroastrian Dilemma.* Oxford: Clarendon Press.

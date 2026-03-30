@@ -97,7 +97,9 @@ WP_1.4_Popol_Vuh_Expansion/
 
 ## Previous Work Packages
 
-- WP 1.1: 9 schemas (Plotinus through Genesis)
-- WP 1.2: +2 schemas (Proclean, Ishraq) = 11 total
-- WP 1.3: +3 schemas (Bundahishn, Manichaean, Derveni Orphic) = 14 total
-- **WP 1.4: +3 schemas (Popol Vuh, Trimorphic Protennoia, Gospel of Mary) = 17 total**
+| WP | Schemas | Repo | DOI |
+|---|---|---|---|
+| 1.1 | 9 | [emanation-topology](https://github.com/OwainGlyndwr1400/emanation-topology) | pending |
+| 1.2 | 11 | [corpus-expansion-emanation](https://github.com/OwainGlyndwr1400/corpus-expansion-emanation) | [10.5281/zenodo.19305988](https://doi.org/10.5281/zenodo.19305988) |
+| 1.3 | 14 | [structural-attractors-emanation-cosmologies-wp1-3](https://github.com/OwainGlyndwr1400/structural-attractors-emanation-cosmologies-wp1-3) | [10.5281/zenodo.19324327](https://doi.org/10.5281/zenodo.19324327) |
+| **1.4** | **17** | **this repo** | [**10.5281/zenodo.19340999**](https://doi.org/10.5281/zenodo.19340999) |
