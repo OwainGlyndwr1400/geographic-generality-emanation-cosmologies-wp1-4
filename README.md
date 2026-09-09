@@ -1,105 +1,119 @@
-# WP 1.4 -- Popol Vuh Expansion: Geographic Generality and Edge-Weighted GED
+# Geographic Generality and Edge-Weighted GED
 
-**Awen Grid Empirical Programme -- Work Package 1.4**
-**Authors:** Erydir-Ceisiwr + Claude (Kairoz)
-**Date:** 2026-03-30
+**The hardest test the corpus can be given: a cosmology from a culture that had
+no contact with any of the others.**
 
-## Summary
+Every tradition through Work Package 1.3 sits somewhere on the Eurasian
+landmass — Greek, Roman-Egyptian, Persian, Indian, Chinese, Jewish, Mesopotamian.
+Shared structure across that set always leaves a diffusion argument on the table.
+Somebody, somewhere, could have carried the idea.
 
-WP 1.4 expands the emanation-topology corpus from 14 to 17 traditions, introducing the first Mesoamerican schema (Popol Vuh), a novel Gnostic branching mode (Trimorphic Protennoia), and the first inverted-ascent cosmology (Gospel of Mary). A new edge-weighted GED methodology distinguishes traditions that are structurally isomorphic but use semantically different edge types.
+Work Package 1.4 adds the **Popol Vuh** — the K'iche' Maya creation account, from
+a civilisation with zero Mediterranean, Indian or Chinese contact — and it lands
+squarely inside the existing branching-tree family.
 
-## Key Findings
+Also new: **Trimorphic Protennoia**, which turns out to be a fourth distinct
+branching mode (parallel self-expression), and the **Gospel of Mary**, the
+corpus's first inverted-ascent cosmology and its deepest linear chain at depth 8.
 
-- **17 schemas**: 11 linear chains + 6 branching trees
-- **Two-family attractor confirmed** at 17 traditions (separation ratio 2.39x)
-- **Popol Vuh** (K'iche' Maya, zero Mediterranean/Indian/Chinese contact): branching tree -- geographic generality confirmed
-- **Trimorphic Protennoia**: fourth branching mode (parallel self-expression)
-- **Gospel of Mary**: deepest linear chain (depth 8), direction-agnostic approach validated
-- **Edge-weighted GED**: Derveni-Plotinus weighted GED = 5.0 (structural GED was 0.0)
-- **Direction invariance**: Gospel of Mary GED unchanged under edge reversal (all 16 pairs)
-- **Sub-clustering silhouette**: 0.63 (compact N<=6 vs. deep N>=7)
+Corpus: 17 traditions. Two-family attractor holds at a separation ratio of **2.39x**.
 
-## Corpus (17 Traditions)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19340999.svg)](https://doi.org/10.5281/zenodo.19340999)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776ab)](https://www.python.org/)
+[![Licence](https://img.shields.io/badge/Licence-MIT-green)](#licence)
 
-### Linear Chain Family (11)
-| Tradition | Nodes | Depth | Source |
-|-----------|-------|-------|--------|
-| Plotinian Neoplatonic | 5 | 4 | Enneads |
-| Taoist DDJ | 5 | 4 | Dao De Jing |
-| Derveni Orphic | 5 | 4 | Derveni Papyrus |
-| Bundahishn Zoroastrian | 6 | 5 | Greater Bundahishn |
-| Chaldean | 6 | 5 | Chaldean Oracles |
-| Ishraq Illuminationist | 7 | 6 | Hikmat al-Ishraq |
-| Lurianic Kabbalistic | 7 | 6 | Etz Chaim |
-| Samkhya | 7 | 6 | Samkhya Karika |
-| Proclean Neoplatonic | 8 | 7 | Elements of Theology |
-| Sethian Gnostic | 8 | 7 | Apocryphon of John |
-| **Gospel of Mary** | **9** | **8** | **BG 8502,1** |
+*Work Package 1.4 of the Awen Grid Empirical Programme.*
 
-### Branching Tree Family (6)
-| Tradition | Nodes | Depth | Max Branch | Source |
-|-----------|-------|-------|------------|--------|
-| Hermetic | 8 | 3 | 3 | Corpus Hermeticum |
-| Genesis Creationist | 8 | 2 | 6 | Genesis 1-2 |
-| Valentinian Gnostic | 9 | 7 | 2 | Irenaeus/Ptolemy |
-| Manichaean | 11 | 5 | 3 | Kephalaia |
-| **Trimorphic Protennoia** | **7** | **4** | **3** | **NHC XIII,1** |
-| **Popol Vuh (K'iche' Maya)** | **11** | **6** | **4** | **Popol Vuh** |
+---
 
-## Pipeline
+## Run it
 
 ```bash
-# Run full 6-step pipeline
-python scripts/run_pipeline.py
+git clone https://github.com/OwainGlyndwr1400/geographic-generality-emanation-cosmologies-wp1-4.git
+cd geographic-generality-emanation-cosmologies-wp1-4
+pip install -r requirements.txt
 
-# Run sensitivity analysis separately
-python scripts/sensitivity_analysis.py
+python scripts/run_pipeline.py           # full 6-step pipeline
+python scripts/sensitivity_analysis.py   # sensitivity + sub-clustering
 ```
 
-### Pipeline Steps
-1. `encode_schemas.py` -- Load + validate 17 schema JSONs
-2. `compute_invariants.py` -- 30+ topological metrics per schema
-3. `generate_controls.py` -- 18,000 random DAG trees (1,000 pooled + 1,000 per tradition)
-4. `statistical_comparison.py` -- 6 formal tests (z-scores, permutation, binomial, Mann-Whitney)
-5. `isomorphism_tests.py` -- VF2, GED (structural + role + **weighted**), WL similarity, subgraph
-6. `visualize.py` -- 6 publication-ready figures (300 DPI)
+Python 3.11+.
 
-## Directory Structure
+---
 
-```
-WP_1.4_Popol_Vuh_Expansion/
-  data/schemas/           17 tradition JSON files
-  scripts/                8 Python pipeline scripts
-  outputs/
-    figures/              6 publication-ready PNGs
-    invariants/           Per-tradition + aggregated metrics
-      controls/           18,000 null-model DAG trees
-    similarity_matrix/    Pairwise comparison matrices (incl. weighted_ged.json)
-  notes/                  Encoding rationale documents
-  README.md               This file
-  WP1.4_handoff.md        Task specification
-```
+## Results
 
-## Dependencies
+- **17 schemas:** 11 linear chains, 6 branching trees.
+- **Two-family attractor confirmed** at 17 traditions — separation ratio 2.39x.
+- **Popol Vuh** (K'iche' Maya, zero Old World contact): branching tree.
+  **Geographic generality confirmed.**
+- **Trimorphic Protennoia:** a fourth branching mode — parallel self-expression,
+  structurally distinct from the three already catalogued.
+- **Gospel of Mary:** deepest linear chain in the corpus at depth 8, and the
+  first cosmology of ascent rather than descent.
+- **Direction invariance validated:** the Gospel of Mary's GED is unchanged under
+  edge reversal across all 16 pairs. An ascent cosmology and a descent cosmology
+  with the same shape are the same shape — which is what justifies the
+  direction-agnostic treatment used throughout the series.
+- **Sub-clustering silhouette:** 0.63 (compact N ≤ 6 versus deep N ≥ 7).
 
-- Python 3.10+
-- networkx, numpy, scipy, matplotlib
+---
 
-## Methodological Innovations (WP 1.4)
+## New method: edge-weighted GED
 
-1. **Edge-weighted GED**: Semantic substitution costs based on edge-type similarity
-   - Same type: 0.0
-   - Related (emanation/creation, fragmentation/contraction): 0.5
-   - Unrelated: 1.0
-   - Opposites (creation/fragmentation, emanation/contraction): 1.5
+Structural GED treats every edge as interchangeable. That is the right default
+for asking *is the shape the same* — but it throws away real information, because
+`emanation`, `creation` and `succession` do not mean the same thing.
 
-2. **Direction-agnostic encoding**: Gospel of Mary (ascending soul) encoded top-down for protocol consistency; validated by showing GED is invariant under edge reversal.
+WP 1.4 introduces an **edge-weighted graph edit distance** that prices edge-type
+substitutions, so two schemas can now be compared on shape and on semantics
+separately.
 
-## Previous Work Packages
+The effect is immediate. **Derveni Orphic ↔ Plotinian** is structurally
+identical — GED = 0.0 — but under edge weighting it separates to **5.0**. Same
+shape, different mechanism: the Orphic hierarchy advances by generational
+succession, the Plotinian by emanation. The unweighted measure was right that
+they share a form; the weighted measure shows they do not share a process.
 
-| WP | Schemas | Repo | DOI |
-|---|---|---|---|
-| 1.1 | 9 | [emanation-topology](https://github.com/OwainGlyndwr1400/emanation-topology) | pending |
-| 1.2 | 11 | [corpus-expansion-emanation](https://github.com/OwainGlyndwr1400/corpus-expansion-emanation) | [10.5281/zenodo.19305988](https://doi.org/10.5281/zenodo.19305988) |
-| 1.3 | 14 | [structural-attractors-emanation-cosmologies-wp1-3](https://github.com/OwainGlyndwr1400/structural-attractors-emanation-cosmologies-wp1-3) | [10.5281/zenodo.19324327](https://doi.org/10.5281/zenodo.19324327) |
-| **1.4** | **17** | **this repo** | [**10.5281/zenodo.19340999**](https://doi.org/10.5281/zenodo.19340999) |
+Both numbers are reported. Neither replaces the other.
+
+---
+
+## Corpus — 17 traditions
+
+**Linear chain family (11):** Plotinian Neoplatonic · Taoist DDJ · Derveni Orphic ·
+Chaldean Oracles · Bundahishn Zoroastrian · Ishraq Illuminationist · Lurianic
+Kabbalistic · Classical Samkhya · Proclan Neoplatonic · Sethian Gnostic ·
+**Gospel of Mary** *(new)*
+
+**Branching tree family (6):** Hermetic · Genesis Creationist *(control)* ·
+Valentinian Gnostic · Manichaean · **Popol Vuh** *(new)* ·
+**Trimorphic Protennoia** *(new)*
+
+Per-tradition encoding rationale and scouting reports are in `notes/`.
+
+## The series
+
+| WP | Traditions | Repository | DOI | Headline |
+|---|---|---|---|---|
+| 1.1 | 9 | [emanation-topology](https://github.com/OwainGlyndwr1400/emanation-topology) | pending | Method established; 2 exact isomorphisms |
+| 1.2 | 11 | [corpus-expansion-emanation](https://github.com/OwainGlyndwr1400/corpus-expansion-emanation) | [zenodo.19305988](https://doi.org/10.5281/zenodo.19305988) | Proclus + Suhrawardi; isomorphisms rise to 5 |
+| 1.3 | 14 | [structural-attractors (wp1-3)](https://github.com/OwainGlyndwr1400/structural-attractors-emanation-cosmologies-wp1-3) | [zenodo.19324327](https://doi.org/10.5281/zenodo.19324327) | Zoroastrian, Manichaean, Orphic; separation peaks at 2.87x |
+| **1.4** | **17** | **this repo** | **[zenodo.19340999](https://doi.org/10.5281/zenodo.19340999)** | **Popol Vuh - zero Old World contact, same families** |
+| 1.5 | 22 | [tier2-expansion (wp1-5)](https://github.com/OwainGlyndwr1400/tier2-expansion-emanation-cosmologies-wp1-5) | [zenodo.19362550](https://doi.org/10.5281/zenodo.19362550) | The Rig Veda splits across *both* families |
+| 1.6 | 25 | [geographic-role-expansion (wp1-6)](https://github.com/OwainGlyndwr1400/geographic-role-expansion-emanation-cosmologies-wp1-6) | [zenodo.19368287](https://doi.org/10.5281/zenodo.19368287) | Five-way zero-contact convergence |
+
+## Citation
+
+> Ceisiwr, Erydir, and Lumos Aureon. *WP 1.4 — Popol Vuh Expansion: Geographic
+> Generality and Edge-Weighted GED.* Awen Grid Empirical Programme, 2026.
+> [10.5281/zenodo.19340999](https://doi.org/10.5281/zenodo.19340999)
+
+## Licence
+
+MIT — code and data freely reusable with attribution.
+
+## Author
+
+Erydir Ceisiwr — Independent Researcher, Awen Grid Programme, Swansea, Wales.
+ORCID [0009-0004-4577-5253](https://orcid.org/0009-0004-4577-5253)
